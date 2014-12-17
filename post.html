@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
     <title>Tekno - Forum</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -9,11 +15,15 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="icon" href="assets/img/favicon.ico" type="image/png">
 	
-	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>-->
-	<script type="text/javascript" src="assets/css/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+	<!--[if IE 8]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 	
-
+	<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="assets/css/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/tekno.js"></script>
+	
 </head>
 <body>
 	<header>
@@ -45,7 +55,18 @@
 				 
 				 <div class="col-md-4 col-sm-5 hidden-xs">
 					<ul class="activities">
-						<li><a href="#" class="active"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a><br/>Search</li>
+						<li>
+							<a href="#" class="active" id="search-2" data-html="true" data-placement="bottom" data-toggle="popover" 
+				            data-content="
+								<div class='input-group'>
+								  <input type='text' class='form-control' name='search' placeholder='keyword...'>
+								  <span class='input-group-btn'>
+									<button class='btn btn-default btn-orange' type='button'><span class='glyphicon glyphicon-search t-white' aria-hidden='true'></span></button>
+								  </span>
+								</div>
+							">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span></a><br/>Search</a>
+						</li>
 						<li><a href="#">74</a><br>Post</li>
 						<li><a href="#">119</a><br>Review</li>
 						<li><a href="#" class="no-border">207</a><br>Comment</li>
@@ -92,10 +113,10 @@
 						
 						<div class="row mb-25">
 							<div class="col-md-12">
-								<textarea class="ckeditor" name="post"></textarea>
+								<textarea name="post" class="cst-textarea"></textarea>
 							</div>
 							<div class="row email-notif">
-								<div class="col-md-6">
+								<div class="col-md-6 col-xs-8">
 									<div class="checkbox">
 										<label>
 										<input type="checkbox" class="checkbox"/>
@@ -103,7 +124,7 @@
 									</div>
 								</div>
 							
-								<div class="col-md-6">
+								<div class="col-md-6 col-xs-4">
 									<input type="submit" class="btn pull-right btn-post" value="Post">
 								</div>
 							</div>
@@ -124,7 +145,7 @@
 								&nbsp;&nbsp;&nbsp;
 								<a href="#"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;Delete</a>
 								<div class="pull-right">
-									Nov 24 2014 &nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="hidden-xs">Nov 24 2014</span> &nbsp;&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-eye-open"></span> 1580
 								</div>
 							</div>
@@ -138,7 +159,7 @@
 								&nbsp;&nbsp;&nbsp;
 								<a href="#"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;Delete</a>
 								<div class="pull-right">
-									Nov 24 2014 &nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="hidden-xs">Nov 24 2014</span> &nbsp;&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-eye-open"></span> 1580
 								</div>
 							</div>
@@ -152,7 +173,7 @@
 								&nbsp;&nbsp;&nbsp;
 								<a href="#"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;Delete</a>
 								<div class="pull-right">
-									Nov 24 2014 &nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="hidden-xs">Nov 24 2014</span> &nbsp;&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-eye-open"></span> 1580
 								</div>
 							</div>
@@ -166,7 +187,7 @@
 								&nbsp;&nbsp;&nbsp;
 								<a href="#"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;Delete</a>
 								<div class="pull-right">
-									Nov 24 2014 &nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="hidden-xs">Nov 24 2014</span> &nbsp;&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-eye-open"></span> 1580
 								</div>
 							</div>
@@ -180,7 +201,7 @@
 								&nbsp;&nbsp;&nbsp;
 								<a href="#"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;Delete</a>
 								<div class="pull-right">
-									Nov 24 2014 &nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="hidden-xs">Nov 24 2014</span> &nbsp;&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-eye-open"></span> 1580
 								</div>
 							</div>
@@ -206,11 +227,11 @@
 						<div class="col-avatar">
 						<img src="images/cover-profil.jpg" class="img-responsive cover-avatar">
 							<div class="row box-account">
-								<div class="col-md-4 avatar2">
+								<div class="col-md-4 col-xs-4 avatar2">
 									<img src="images/user-1.jpeg" class="foto-user2">
 									<div class="status-active"></div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-8 col-xs-8">
 									<h4>Amanda San</h4>
 									<h5>Depok, Indonesia</h5>
 									<ul class="pull-right">
