@@ -1,5 +1,6 @@
-
 @import url(bootstrap/css/bootstrap.css);
+@import url(animate.css);
+
 @charset "UTF-8";
 
 /* ------------------------------ Fonts ------------------------------ */
@@ -68,6 +69,13 @@ p {
 .t-orange {
 	color:#F48300;
 }
+.t-white {
+	color:#FFF!important;
+}
+.btn-orange {
+	background:#F48300;
+}
+
 /* ------------------------------  Header ------------------------------  */
 header {
 	height:60px;
@@ -196,6 +204,13 @@ a.btn-post-border:hover {
 }	
 .activities li a:hover, .no-border  {
 	border:none!important;
+}
+.activities .popover.bottom {
+	margin-left:100px;
+	margin-top:20px!important;
+}
+.popover.bottom .arrow{
+	left:15%!Important;
 }
 /* ------------------------------  Banner  ------------------------------  */
 .banner-category {
@@ -656,4 +671,11 @@ footer a {
 	.search-home {
 		top:15%;
 	}
+}
+
+.hide-el{
+     opacity:0;
+}
+.visible{
+     opacity:1!important;
 }
